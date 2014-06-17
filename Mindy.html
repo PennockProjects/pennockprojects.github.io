@@ -1,12 +1,63 @@
 <h1>This is the Mindy File</h1>
 
-<h2>a h2 in the Mindy File</h2>
+<h2>This is the Mindy on MongoLabs h2</h2>
 
-<blockquote>
-  <p>a quote in the Mindy File</p>
-</blockquote>
+<hr />
 
-<ul>
-<li>Mindy List Two</li>
-<li>Mindy List Two</li>
-</ul>
+<p>below the rule 2</p>
+
+<h2>This is the <em>second</em> editor.</h2>
+
+<p>It has a plugin hook registered that surrounds all words starting with the <br>
+letter A with asterisks before doing the Markdown conversion. Another one gives bare links <br>
+a nicer link text. User input isn&#8217;t sanitized here:</p>
+
+<p><marquee>I&#8217;m the ghost from the past!</marquee></p>
+
+<h1>Markdown Extra</h1>
+
+<h2>Tables</h2>
+
+<table>
+<thead>
+<tr>
+  <th>Item</th>
+  <th style="text-align:right;">Value</th>
+</tr>
+</thead>
+<tr>
+  <td>Air Conditioner</td>
+  <td style="text-align:right;">$1600</td>
+</tr>
+<tr>
+  <td><del>Phone</del></td>
+  <td style="text-align:right;">$12</td>
+</tr>
+<tr>
+  <td><em>Pipe</em></td>
+  <td style="text-align:right;">$1</td>
+</tr>
+</table>
+
+
+<p>I&#8217;ve added just some basic borders and padding. Notice that span-level tags will <br>
+still be rendered inside of the table. Also, you can specify a class for the generated <br>
+tables using <code>Markdown.Extra.init({table_class: "table table-striped"})</code> for instance.</p>
+
+<p>Take a look at the source and you&#8217;ll see that the tables <br>
+plugin is last in the chain. Otherwise, the <code>Air</code> in <code>Air Conditioner</code> would render <br>
+as raw markdown instead of being emphasized.</p>
+
+<h2>Fenced Code Blocks</h2>
+
+<pre><code class="javascript">var foo = "bar";</code></pre>
+
+<p>You can also specify additional options. Markdown.Extra was given the following options <br>
+for this editor.</p>
+
+<pre><code class="javascript">  Markdown.Extra.init(converter2, {
+    extensions: "all",
+    highlighter: "prettify"
+  });</code></pre>
+
+<p>(asterisks around &#8220;all&#8221; are from the preConversion hook)</p>
